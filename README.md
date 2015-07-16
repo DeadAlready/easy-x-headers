@@ -9,7 +9,9 @@ This module creates express middleware to map http headers starting with x- to a
 	
 	var app = express();
 	
-	app.use(xHeaders.getMiddleware());
+	app.use(xHeaders.getMiddleware({
+		role: 'default'
+	}));
 	
 ## Licence
 

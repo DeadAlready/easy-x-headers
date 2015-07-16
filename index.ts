@@ -8,7 +8,8 @@
 
 import express = require('express');
 
-export function getMiddleware(): express.RequestHandler {
+export function getMiddleware(defaults: Object = {}): express.RequestHandler {
+
     return function apiMiddleware(req:any, res:express.Response, next: Function): void {
 
         var info:any = {};
@@ -20,6 +21,11 @@ export function getMiddleware(): express.RequestHandler {
                 }
             });
         }
+        Object.keys(defaults).forEach(function (key) {
+            if(info[key] === undefined) {
+                info[key] = defaults[key];
+            }
+        });
 
         req.info = info;
 

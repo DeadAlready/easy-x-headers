@@ -1,6 +1,6 @@
 {
   "name": "easy-x-headers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "X-headers to object mapper",
   "main": "index.js",
   "scripts": {

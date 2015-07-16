@@ -3,7 +3,8 @@
  */
 /// <reference path='typings/tsd.d.ts' />
 'use strict';
-function getMiddleware() {
+function getMiddleware(defaults) {
+    if (defaults === void 0) { defaults = {}; }
     return function apiMiddleware(req, res, next) {
         var info = {};
         if (req.headers) {
@@ -14,6 +15,11 @@ function getMiddleware() {
                 }
             });
         }
+        Object.keys(defaults).forEach(function (key) {
+            if (info[key] === undefined) {
+                info[key] = defaults[key];
+            }
+        });
         req.info = info;
         next();
     };
