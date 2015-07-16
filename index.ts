@@ -22,7 +22,7 @@ export function getMiddleware(): express.RequestHandler {
         }
 
         req.info = info;
-        
+
         next();
     }
 }
