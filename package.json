@@ -1,0 +1,25 @@
+{
+  "name": "easy-x-headers",
+  "version": "1.0.0",
+  "description": "X-headers to object mapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeadAlready/easy-x-headers.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "headers",
+    "custom"
+  ],
+  "author": "Karl Düüna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeadAlready/easy-x-headers/issues"
+  },
+  "homepage": "https://github.com/DeadAlready/easy-x-headers"
+}
